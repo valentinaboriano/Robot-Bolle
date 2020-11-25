@@ -1,7 +1,10 @@
 import u2
 from reporting import *
+import time
 
-problem = u2.A((1, 1, 1, 1, 1, 1, 1, 1, 0, 3600))
+startTime = time.time()
+
+problem = u2.A((1, 1, 1, 1, 1, 1, 1, 1, 0, 5000 ))
 # print("exp = {}".format(problem.exp))
 solution = breadth_first_graph_search(problem)
 # print("eye = {}".format(problem.eye))
@@ -22,3 +25,4 @@ for i in range(n_moves+1):
 print(new_path)
 cost = solution.path_cost
 print('cost = {}'.format(cost))
+print(time.time() - startTime)  #outuput time used
